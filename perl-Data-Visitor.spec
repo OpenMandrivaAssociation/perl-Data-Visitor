@@ -1,7 +1,7 @@
 %define	module	Data-Visitor
 %define	name	perl-%{module}
 %define	modprefix Data
-%define	version	0.10
+%define	version	0.15
 %define	release	%mkrel 1
 
 Name:		%{name}
@@ -12,8 +12,6 @@ License:	GPL or Artistic
 Group:		Development/Perl
 Source:		http://www.cpan.org/modules/by-module/%{modprefix}/%{module}-%{version}.tar.bz2
 Url:		http://search.cpan.org/dist/%{module}
-BuildArch:	noarch
-BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 %if %{mdkversion} < 1010
 BuildRequires:	perl-devel
 %endif
@@ -22,6 +20,9 @@ BuildRequires:	perl(Module::Build)
 BuildRequires:	perl-Test-MockObject >= 1.04
 BuildRequires:	perl(Test::More)
 BuildRequires:	perl(Test::use::ok)
+BuildRequires:	perl(Tie::ToObject)
+BuildArch:	noarch
+BuildRoot:	%{_tmppath}/%{name}-%{version}
 
 %description
 This module is a simple visitor implementation for Perl values.
