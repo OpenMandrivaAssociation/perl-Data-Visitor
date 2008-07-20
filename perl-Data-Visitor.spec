@@ -1,7 +1,7 @@
 %define	module	Data-Visitor
 %define	name	perl-%{module}
 %define	modprefix Data
-%define	version	0.15
+%define	version	0.17
 %define	release	%mkrel 1
 
 Name:		%{name}
