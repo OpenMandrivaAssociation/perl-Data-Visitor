@@ -1,7 +1,7 @@
 %define	module	Data-Visitor
 %define	name	perl-%{module}
 %define	modprefix Data
-%define	version	0.17
+%define	version	0.18
 %define	release	%mkrel 1
 
 Name:		%{name}
@@ -21,6 +21,7 @@ BuildRequires:	perl-Test-MockObject >= 1.04
 BuildRequires:	perl(Test::More)
 BuildRequires:	perl(Test::use::ok)
 BuildRequires:	perl(Tie::ToObject)
+BuildRequires:	perl(Squirrel)
 BuildArch:	noarch
 BuildRoot:	%{_tmppath}/%{name}-%{version}
 
