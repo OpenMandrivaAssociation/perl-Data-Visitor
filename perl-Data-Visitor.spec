@@ -22,7 +22,7 @@ BuildRequires:	perl(Test::More)
 BuildRequires:	perl(Test::use::ok)
 BuildRequires:	perl(Tie::ToObject)
 BuildRequires:	perl(Squirrel)
-BuildRequires:	perl-namespace
+BuildRequires:	perl-namespace-clean
 BuildArch:	noarch
 BuildRoot:	%{_tmppath}/%{name}-%{version}
 
