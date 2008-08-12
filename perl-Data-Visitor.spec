@@ -2,7 +2,7 @@
 %define	name	perl-%{module}
 %define	modprefix Data
 %define	version	0.18
-%define	release	%mkrel 1
+%define	release	%mkrel 2
 
 Name:		%{name}
 Version:	%{version}
@@ -10,11 +10,9 @@ Release:	%{release}
 Summary:	A visitor for Perl data structures
 License:	GPL or Artistic
 Group:		Development/Perl
-Source:		http://www.cpan.org/modules/by-module/%{modprefix}/%{module}-%{version}.tar.bz2
 Url:		http://search.cpan.org/dist/%{module}
-%if %{mdkversion} < 1010
-BuildRequires:	perl-devel
-%endif
+Source:		http://www.cpan.org/modules/by-module/%{modprefix}/%{module}-%{version}.tar.bz2
+Requires:	    perl-namespace-clean
 BuildRequires:	perl(Class::Accessor)
 BuildRequires:	perl(Module::Build)
 BuildRequires:	perl-Test-MockObject >= 1.04
