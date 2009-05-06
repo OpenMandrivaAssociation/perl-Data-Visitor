@@ -1,7 +1,7 @@
 %define	module	Data-Visitor
 %define	name	perl-%{module}
 %define	modprefix Data
-%define	version	0.22
+%define	version	0.24
 %define	release	%mkrel 1
 
 Name:		%{name}
@@ -13,7 +13,9 @@ Group:		Development/Perl
 Url:		http://search.cpan.org/dist/%{module}
 Source:		http://www.cpan.org/modules/by-module/%{modprefix}/%{module}-%{version}.tar.bz2
 Requires:	    perl-namespace-clean
+BuildRequires:	perl(Any::Moose)
 BuildRequires:	perl(Class::Accessor)
+BuildRequires:	perl(Data::Alias)
 BuildRequires:	perl(Module::Build)
 BuildRequires:	perl-Test-MockObject >= 1.04
 BuildRequires:	perl(Test::More)
