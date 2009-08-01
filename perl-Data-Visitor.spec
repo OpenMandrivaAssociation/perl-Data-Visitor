@@ -1,18 +1,16 @@
-%define	module	Data-Visitor
-%define	name	perl-%{module}
-%define	modprefix Data
-%define	version	0.25
-%define	release	%mkrel 1
+%define	upstream_name	 Data-Visitor
+%define	upstream_version 0.25
 
-Name:		%{name}
-Version:	%{version}
-Release:	%{release}
+Name:       perl-%{upstream_name}
+Version:    %perl_convert_version %{upstream_version}
+Release:    %mkrel 1
+
 Summary:	A visitor for Perl data structures
-License:	GPL or Artistic
+License:	GPL+ or Artistic
 Group:		Development/Perl
-Url:		http://search.cpan.org/dist/%{module}
-Source:		http://www.cpan.org/modules/by-module/%{modprefix}/%{module}-%{version}.tar.bz2
-Requires:	    perl-namespace-clean
+Url:		http://search.cpan.org/dist/%{upstream_name}
+Source0:	http://www.cpan.org/modules/by-module/Data/%{upstream_name}-%{upstream_version}.tar.bz2
+
 BuildRequires:	perl(Any::Moose)
 BuildRequires:	perl(Class::Accessor)
 BuildRequires:	perl(Data::Alias)
@@ -24,13 +22,14 @@ BuildRequires:	perl(Tie::ToObject)
 BuildRequires:	perl(Squirrel)
 BuildRequires:	perl-namespace-clean
 BuildArch:	noarch
-BuildRoot:	%{_tmppath}/%{name}-%{version}
+BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}
+Requires:	perl-namespace-clean
 
 %description
 This module is a simple visitor implementation for Perl values.
 
 %prep
-%setup -q -n %{module}-%{version}
+%setup -q -n %{upstream_name}-%{upstream_version}
 
 %build
 %{__perl} Makefile.PL INSTALLDIRS=vendor
@@ -49,6 +48,5 @@ rm -rf %{buildroot}
 %files
 %defattr(-,root,root)
 %doc Changes
-%{perl_vendorlib}/%{modprefix}
+%{perl_vendorlib}/Data
 %doc %{_mandir}/*/*
-
