@@ -1,5 +1,5 @@
 %define	upstream_name	 Data-Visitor
-%define	upstream_version 0.25
+%define	upstream_version 0.26
 
 Name:       perl-%{upstream_name}
 Version:    %perl_convert_version %{upstream_version}
@@ -9,7 +9,7 @@ Summary:	A visitor for Perl data structures
 License:	GPL+ or Artistic
 Group:		Development/Perl
 Url:		http://search.cpan.org/dist/%{upstream_name}
-Source0:	http://www.cpan.org/modules/by-module/Data/%{upstream_name}-%{upstream_version}.tar.bz2
+Source0:	http://www.cpan.org/modules/by-module/Data/%{upstream_name}-%{upstream_version}.tar.gz
 
 BuildRequires:	perl(Any::Moose)
 BuildRequires:	perl(Class::Accessor)
