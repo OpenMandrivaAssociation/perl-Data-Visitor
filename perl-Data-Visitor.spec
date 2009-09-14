@@ -15,6 +15,8 @@ BuildRequires:	perl(Any::Moose)
 BuildRequires:	perl(Class::Accessor)
 BuildRequires:	perl(Data::Alias)
 BuildRequires:	perl(Module::Build)
+BuildRequires:	perl(Moose)
+BuildRequires:	perl(Task::Weaken)
 BuildRequires:	perl-Test-MockObject >= 1.04
 BuildRequires:	perl(Test::More)
 BuildRequires:	perl(Test::use::ok)
