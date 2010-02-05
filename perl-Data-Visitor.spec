@@ -1,5 +1,5 @@
 %define	upstream_name	 Data-Visitor
-%define	upstream_version 0.26
+%define upstream_version 0.27
 
 Name:       perl-%{upstream_name}
 Version:    %perl_convert_version %{upstream_version}
@@ -22,10 +22,12 @@ BuildRequires:	perl(Test::More)
 BuildRequires:	perl(Test::use::ok)
 BuildRequires:	perl(Tie::ToObject)
 BuildRequires:	perl(Squirrel)
-BuildRequires:	perl-namespace-clean
+BuildRequires:	perl(namespace::clean)
+
 BuildArch:	noarch
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}
-Requires:	perl-namespace-clean
+
+Requires:	perl(namespace::clean)
 
 %description
 This module is a simple visitor implementation for Perl values.
