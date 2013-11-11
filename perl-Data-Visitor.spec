@@ -1,15 +1,15 @@
 %define	upstream_name	 Data-Visitor
-%define upstream_version 0.27
+%define upstream_version 0.30
 
 Name:		perl-%{upstream_name}
 Version:	%perl_convert_version %{upstream_version}
-Release:	4
+Release:	1
 
 Summary:	A visitor for Perl data structures
 License:	GPL+ or Artistic
 Group:		Development/Perl
 Url:		http://search.cpan.org/dist/%{upstream_name}
-Source0:	http://www.cpan.org/modules/by-module/Data/%{upstream_name}-%{upstream_version}.tar.gz
+Source0:	http://www.cpan.org/modules/by-module/Data/Data-Visitor-%{upstream_version}.tar.gz
 
 BuildRequires:	perl-devel
 BuildRequires:	perl(Any::Moose)
@@ -157,4 +157,5 @@ Import perl-Data-Visitor
 
 * Wed Mar 15 2006 Rafael Garcia-Suarez <rgarciasuarez@mandriva.com> 0.02-1mdk
 - Initial MDV release
+
 
