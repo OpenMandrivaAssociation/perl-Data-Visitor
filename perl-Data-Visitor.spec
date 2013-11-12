@@ -20,6 +20,7 @@ BuildRequires:	perl(Moose)
 BuildRequires:	perl(Task::Weaken)
 BuildRequires:	perl-Test-MockObject >= 1.04
 BuildRequires:	perl(Test::More)
+BuildRequires: perl(Test::Requires)
 BuildRequires:	perl(Test::use::ok)
 BuildRequires:	perl(Tie::ToObject)
 BuildRequires:	perl(Squirrel)
