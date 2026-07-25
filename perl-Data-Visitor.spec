@@ -1,15 +1,15 @@
 %define	upstream_name	 Data-Visitor
-%define upstream_version 0.30
+%define upstream_version 0.32
 
 Name:		perl-%{upstream_name}
-Version:	%perl_convert_version %{upstream_version}
-Release:	3
+Version:	%{upstream_version}
+Release:	1
 
 Summary:	A visitor for Perl data structures
 License:	GPL+ or Artistic
 Group:		Development/Perl
-Url:		https://search.cpan.org/dist/%{upstream_name}
-Source0:	http://www.cpan.org/modules/by-module/Data/Data-Visitor-%{upstream_version}.tar.gz
+Url:		https://github.com/karenetheridge/Data-Visitor
+Source0:	https://cpan.metacpan.org/authors/id/E/ET/ETHER/Data-Visitor-%{upstream_version}.tar.gz
 
 BuildRequires:	make
 BuildRequires:	perl-devel
